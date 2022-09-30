@@ -42,7 +42,6 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: A fast and modern Python SOAP client
-
   description: |
     Zeep inspects the WSDL document and generates the corresponding code to use
     the services and types in the document. This provides an easy to use

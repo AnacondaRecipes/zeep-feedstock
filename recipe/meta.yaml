@@ -42,6 +42,8 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: A fast and modern Python SOAP client
+  doc_url: http://docs.python-zeep.org/
+  dev_url: https://github.com/mvantellingen/python-zeep
 
   description: |
     Zeep inspects the WSDL document and generates the corresponding code to use

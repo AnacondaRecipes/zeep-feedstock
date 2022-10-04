@@ -43,7 +43,7 @@ test:
     - pip
 
 about:
-  home: http://www.python-zeep.org
+  home: http://www.python-zeep.org #https is not supported
   license: MIT
   license_family: MIT
   license_file: LICENSE
@@ -60,7 +60,7 @@ about:
     Parsing the XML documents is done by using the lxml library. This is the
     most performant and compliant Python XML library currently available. This
     results in major speed benefits when processing large SOAP responses.
-  doc_url: http://docs.python-zeep.org/
+  doc_url: http://docs.python-zeep.org/  #https is not supported
   dev_url: https://github.com/mvantellingen/python-zeep
 
 extra:

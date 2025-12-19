@@ -1,13 +1,13 @@
 {% set name = "zeep" %}
-{% set version = "4.3.1" %}
+{% set version = "4.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f45385e9e1b09d5550e0f51ab9fa7c6842713cab7194139372fd82a99c56a06e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1a23a667ce9d73a0dbfdf15745bfa2b7ab0b6402135c0cd5067574838398e0e6
 
 build:
   number: 0
@@ -42,13 +42,14 @@ test:
   requires:
     - pip
     - pytest
+    - pytest-asyncio
     - requests-mock
     - pretend
     - freezegun
   commands:
     - pip check
-    # test requires missing pytest-httpx
-    - pytest -vv tests --ignore="tests/test_async_transport.py"
+    # test requires missing pytest-httpx and zeep[async]
+    - pytest -vv tests --ignore="tests/test_async_transport.py" --ignore="tests/test_async_client.py"
 
 about:
   home: https://docs.python-zeep.org

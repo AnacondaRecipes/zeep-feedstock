@@ -42,6 +42,7 @@ test:
   requires:
     - pip
     - pytest
+    - pytest-asyncio
     - requests-mock
     - pretend
     - freezegun
